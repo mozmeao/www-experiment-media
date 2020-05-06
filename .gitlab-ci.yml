@@ -1,0 +1,8 @@
+process data:
+  stage: build
+  tags:
+    - mozmeao
+  only:
+    - master
+  script:
+    - ./push.sh
