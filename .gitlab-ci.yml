@@ -1,9 +1,12 @@
-process data:
+upload media:
   stage: build
   tags:
     - aws
     - mozmeao
   only:
-    - master
+    changes:
+      - "media/**/*"
+    refs:
+      - master
   script:
     - ./push.sh
